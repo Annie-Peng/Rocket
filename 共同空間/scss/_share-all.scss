@@ -13,7 +13,7 @@ body{
 
 .banner{
     height: 735px;
-    background-image: url(/火箭隊官網/火箭隊/banner/banner-bg.png);
+    background-image: url(../banner/banner-bg.png);
     .container{
         padding-top: 127px;
         .an-rounded1{
@@ -196,7 +196,7 @@ body{
                         &:nth-child(n+2){
                             margin-top: 16px;
                         }
-                    list-style-image: url('/火箭隊官網/共同空間/fee/ic-check-lg.svg');
+                    list-style-image: url('../fee/ic-check-lg.svg');
                     }
                     span{
                         display: table-cell;

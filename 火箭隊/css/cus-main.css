@@ -14127,7 +14127,7 @@ body {
 }
 .training .col-10 .an-square {
   margin-top: 80px;
-  background-image: url(/火箭隊官網/火箭隊/training/training-bg.png);
+  background-image: url(../training/training-bg.png);
 }
 .training .col-10 .an-square .left .title {
   max-width: 204px;
