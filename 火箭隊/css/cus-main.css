@@ -13963,7 +13963,7 @@ body {
 
 .banner {
   height: 735px;
-  background-image: url(/火箭隊官網/火箭隊/banner/banner-bg.png);
+  background-image: url(../banner/banner-bg.png);
 }
 .banner .container {
   padding-top: 127px;
