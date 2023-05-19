@@ -1,0 +1,7 @@
+@mixin title-accent($color1){
+    background: linear-gradient(transparent 15%, $color1 15%);
+}
+
+@mixin content-accent($color1){
+    background: linear-gradient(transparent 35%, $color1 35%);
+}

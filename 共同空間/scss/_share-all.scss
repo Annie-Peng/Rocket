@@ -1,0 +1,246 @@
+
+body{
+    font-family: 'Josefin Sans', 'Noto sans TC', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+}
+
+.navbar{
+    height: 64px;
+    box-sizing: border-box;
+    z-index: 4;
+}
+
+.banner{
+    height: 735px;
+    background-image: url(/火箭隊官網/火箭隊/banner/banner-bg.png);
+    .container{
+        padding-top: 127px;
+        .an-rounded1{
+            border-radius: 24px;
+            height: 448px;
+            transition: .5s;
+            opacity: .8;
+            &:hover{
+                transform: translateY(-15px);
+                opacity: 1;
+            }
+            .item{
+                margin-top: -34px;
+                .an-bg-circle{
+                    margin: 24px auto 0;
+                    width: 120px;
+                    height: 120px;
+                    position: relative;
+                    z-index: -1;
+                }
+                .lo{
+                    margin-top: -190px;
+                }
+                .highlight{
+                    position: absolute;
+                    right: -30px;
+                    top: -50px;
+                    display: none;
+                }
+            }
+        }
+        .col-2{
+            height: 448px;
+            padding-top: 206px;
+            .an-corss{
+                line-height: 72px;
+            }
+        }
+    }
+}
+
+.map{
+    height: 540px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    .container{
+        padding: 60px 0px;
+        .pic{
+            padding: 12px;
+            box-sizing: border-box;
+            max-width: 636px;
+            max-height: 420px;
+            img{
+                width: 100%;
+            }
+        }
+        .content{
+            margin-top: 40px;
+            font-weight: 400;
+            line-height: 1.875;
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+
+}
+
+.space{
+    padding-top: 80px;
+    >.title{
+        text-align: center;
+        margin-top: 80px;
+    }
+    .hard-ware{
+        .col-10{
+            margin-top: 60px;
+        }
+        .col-5{
+            margin-top: 48px;
+            .pic{
+                max-width: 510px;
+                box-sizing: border-box;
+            }
+            div{
+                &:nth-child(n+2){
+                    font-weight: 400;
+                }
+                span{
+                    font-weight: 700;
+                }
+            }
+
+        }
+    }
+    .soft-ware{
+        margin-top: 84px;
+        .item{
+            padding: 0 38px;
+            max-width: 400px;
+            margin-top: 28px;
+            .content div{
+                &:last-child{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.gallery{
+    margin-top: 80px;
+    display: flex;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+        }
+    scroll-snap-type: both mandatory;
+    li {
+        scroll-snap-align: center;
+        display: inline-block;
+        &:nth-child(n+2){
+            margin-left: 24px;
+        }
+    }    
+}
+
+.active {
+    scroll-snap-type: unset;
+}
+
+
+.fee{
+    height: 1093px;
+    margin-top: 80px;
+    box-sizing: border-box;
+    .col-10{
+        .promotion{
+            margin-top: 60px;
+            position: relative;
+            height: 70px;
+            >div{
+                position: absolute;
+                left: 90px;
+                top: 16px;
+                z-index: 2;
+            }
+            img{
+                position: absolute;
+                left: 74px;
+                top: 0;
+    
+            }
+            .title{
+                margin-top: 37px;
+            }
+        }
+        .content{
+            font-weight: 400;
+            span{
+                font-weight: 700;
+            }
+        }
+        .row-cols-2{
+            .select{
+                max-width: 526px;
+                margin-top: 36px;
+                height: 608px;
+                padding: 36px 0 0;
+                border-radius: 24px;
+                .cost{
+                    padding: 40px 0;
+                    width: 365px;
+                }
+                ul{
+                    max-width: 365px;
+                    margin-top: 28px;
+                    // display: table;
+                    li{
+                        &:nth-child(n+2){
+                            margin-top: 16px;
+                        }
+                    list-style-image: url('/火箭隊官網/共同空間/fee/ic-check-lg.svg');
+                    }
+                    span{
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                }
+            }
+    
+        }
+    }
+    
+    .signup{
+        height: 96px;
+        margin-top: 40px;
+        img{
+            display: none;
+            transition: .3s;
+        }
+        .title{
+            transition: .3s;
+        }
+        &:hover{
+            img{
+                display: block;
+            }
+            .title{
+                transform: translateX(-20px);
+            }
+        }
+    }
+}
+
+footer{
+    padding: 36px 0;
+}
+
+.title-accent{
+    @include title-accent(#FFD887);
+}
+
+.content-accent{
+    @include content-accent(#FFD887);
+}
+
+.addBorder{
+    border: 2px solid #363636;
+}

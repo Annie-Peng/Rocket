@@ -1,0 +1,414 @@
+
+
+body{
+    font-family: 'Josefin Sans', 'Noto sans TC', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+}
+
+.navbar{
+    height: 64px;
+    box-sizing: border-box;
+    z-index: 4;
+}
+
+.banner{
+    height: 735px;
+    background-image: url(/火箭隊官網/火箭隊/banner/banner-bg.png);
+    .container{
+        padding-top: 127px;
+        .an-rounded1{
+            border-radius: 24px;
+            max-width: 440px;
+            height: 448px;
+            transition: .5s;opacity: .8;
+            &:hover{
+                transform: translateY(-15px);
+                opacity: 1;
+            }
+            .item{
+                margin-top: -34px;
+                .an-bg-circle{
+                    margin: 24px auto 0;
+                    width: 120px;
+                    height: 120px;
+                    position: relative;
+                    z-index: -1;
+                }
+                .lo{
+                    margin-top: -190px;
+                }
+                .highlight{
+                    position: absolute;
+                    right: -30px;
+                    top: -50px;
+                    display: none;
+                }
+                .an-background{
+                    max-width: 440px;
+                    height: 448px;
+                    border-radius: 24px;
+                    position: absolute;
+                    right: -8px;
+                    bottom: -8px;
+                }
+            }
+        }
+        .col-2{
+            height: 448px;
+            padding-top: 206px;
+            .an-corss{
+                line-height: 72px;
+            }
+        }
+    }
+}
+
+.about{
+    height: 712px;
+    border-radius: 40px;
+    padding: 60px 0px;
+    box-sizing: border-box;
+    .container{
+        .left{
+            .content{
+                margin-top: 40px;
+                font-weight: 400;
+                line-height: 1.875;
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
+        .right{
+            .an-scroll{
+                height: 592px;
+                overflow-y: scroll;
+                &::-webkit-scrollbar{
+                    display: none;
+                    }
+                .an-rounded{
+                    height: 280px;
+                    border-radius: 24px;
+                    display: flex;
+                    position: relative;
+                    &:nth-child(n+2){
+                        margin-top: 32px;
+                    }
+                    .title{
+                        padding: 36px;
+                        span{
+                            margin-top: 12px;
+                            border-radius: 50% / 100%;
+                            padding: 8px 16px;
+                            &:nth-child(n+2){
+                                margin-right: 12px;
+                            }
+                        }
+                        div{
+                            &:last-child{
+                                margin-top: 80px;
+                            }
+                        }
+                    }
+                    .pic{
+                        width: 169px;
+                        height: 208px;
+                        border-radius: 24px;
+                        position: absolute;
+                        top: 36px;
+                        right: 36px;
+                    }
+                    img{
+                        position: absolute;
+                        right: 76px;
+                        top: 60px;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sucess{
+    .container{
+        padding-top: 92px;
+        .title{
+            text-align: center;
+        }
+        .pic-group{
+            .col{
+                margin-top: 28px;
+                max-width: 306px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.training{
+    margin-top: 92px;
+    .col-12{
+        &:first-child{
+            .title{
+                margin-top: -22px;
+            }
+            .sub-title{
+                max-width: 636px;
+                height: 58px;
+                margin: 12px auto 0px;
+                padding: 17px 0 17px 0px;
+                box-shadow: 0px 2px 4px 0px #E8E8E8;
+                border-radius: 50px;
+                box-sizing: border-box;
+                span:first-child{
+                    padding-right: 10px;
+                }
+                span:last-child{
+                    font-weight: 500;
+                    padding-left: 10px;
+                    }
+                }
+            }
+        }
+    .col-10{
+        .an-height-1{
+            height: 588px;
+        }
+        .an-height-2{
+            height: 384px;
+        }
+        .an-height-3{
+            height: 356px;
+        }
+        .an-square{
+
+            margin-top: 80px;
+            background-image: url(/火箭隊官網/火箭隊/training/training-bg.png);
+            .left{
+                .title{
+                    max-width: 204px;
+                    height: 60px;
+                    box-sizing: border-box;
+                    border-radius: 12px;
+                    margin-top: -26px;
+                    padding: 10px 38px;
+                    box-shadow: 4px 4px #363636;
+                    :last-child{
+                        box-shadow: 6px 4px #363636;
+                    }
+                }
+                .content{
+                    margin-top: 36px;
+                    &:first-child{
+                        margin-top: 28px;
+                    }
+                    div{
+                        font-weight: 400;
+                    }
+                }
+            }
+            .opposite-left{
+                .title{
+                    max-width: 204px;
+                    height: 60px;
+                    box-sizing: border-box;
+                    border-radius: 12px;
+                    margin-top: -26px;
+                    padding: 10px 38px;  
+                    position: relative; 
+                    box-shadow: 4px 4px #363636;
+                }
+                img{
+                    margin-top: 36px;
+                }
+            }
+            .opposite-right{
+                .content{
+                    margin-top: 36px;
+                    &:first-child{
+                        margin-top: 76px;
+                    }
+                    div{
+                        font-weight: 400;
+                    }
+                }
+            }
+            img{
+                max-width: 280px;
+            }
+        }
+    }
+}
+    
+
+
+.coach{
+    .title{
+        margin-top: 64px;
+    }
+    .an-pic{
+        margin-top: 40px;
+        box-sizing: border-box;
+        width: 251px;
+        height: 160px;
+        position: relative;
+        background-color: white;
+        .pic{
+            width: 180px;
+            height: 180px;
+            img{
+                bottom: 0px;
+                left: 0px;
+                position: absolute;
+                width: 180px;
+            }
+        }
+        .text{
+            position: absolute;
+            top: -24px;
+            right: 20px;
+            border-radius: 12px;
+            text-align: center;
+            width: 48px;
+            box-sizing: border-box;
+            transition: .3s;
+            box-shadow: 4px 4px #363636;
+        }
+        &:hover{
+            .text{
+                top: -40px;
+            }
+        }
+        
+        
+    }
+    .trans-content{
+        margin-top: 28px;
+        .title{
+            margin-top: 28px;
+        }
+        .list{
+            margin-top: 12px;
+            li{
+                a{
+                    color: #363636; 
+                }
+            }
+            
+        }
+    }
+    .signup{
+        height: 96px;
+        margin-top: 80px;
+        margin-bottom: -48px;
+        img{
+            display: none;
+            transition: .3s;
+        }
+        .title{
+            transition: .3s;
+            margin-top: 0px;
+        }
+        &:hover{
+            img{
+                display: block;
+            }
+            .title{
+                transform: translateX(-20px);
+            }
+        }
+    }
+}
+
+.fee{
+    padding-top: 80px;
+    .question{
+        margin-left: 32px;
+        div{
+            &:nth-child(2n){
+                font-weight: 500;
+                span{
+                    font-weight: 700;
+                }
+                a{
+                    color: #363636; 
+                }
+            }
+        }
+    }
+
+        
+    .process{
+        .title{
+            margin-top: 60px;
+        }
+        .question{
+            margin-left: 32px;
+        }
+    }
+    
+}   
+
+
+.organizer{
+    margin-top: 124px;
+    height: 312px;
+        .title{
+            font-size: 32px;
+            margin-top: -24px;
+        }
+        .item{
+            margin-top: 32px;
+            .pic{
+                width: 196px;
+                height: 148px;
+                box-sizing: border-box;
+                border-radius: 12px;
+                line-height: 148px;
+                img{
+                    vertical-align: middle;
+                }
+            }
+            .content{
+                font-weight: 500;
+            }
+    
+        }
+
+}
+
+footer{
+    padding: 36px 0;
+}
+
+
+.an-rounded{
+    border-radius: 24px;
+}
+
+.question{
+    margin-left: 32px;
+    div{
+        &:nth-child(2n){
+            font-weight: 500;
+            span{
+                font-weight: 700;
+            }
+            a{
+                color: #363636; 
+            }
+        }
+    }
+}
+
+
+.content-accent{
+    @include content-accent(#FFD887)
+}
+
+
+

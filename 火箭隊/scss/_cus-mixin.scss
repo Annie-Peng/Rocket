@@ -1,0 +1,4 @@
+
+@mixin content-accent($color1){
+    background: linear-gradient(transparent 10%, $color1 10%);
+}
