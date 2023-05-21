@@ -17,40 +17,52 @@ body{
     background-image: url(../banner/banner-bg.png);
     .container{
         padding-top: 127px;
-        .an-rounded1{
+        a{
+            text-decoration: none;
+            color: #363636;
+        }
+        .an-rounded1, .an-rounded2{
             border-radius: 24px;
             max-width: 440px;
             height: 448px;
-            transition: .5s;opacity: .8;
+            transition: .5s;
+            position: relative;
             &:hover{
                 transform: translateY(-15px);
-                opacity: 1;
             }
             .item{
-                margin-top: -34px;
+                &:hover{
+                    opacity: 1;
+                }
+                margin-top: -10px;
+                opacity: .5;
+                line-height: 35px;
+                .cover{
+                    height: 70px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 52px;
+                    z-index: 1;
+                }
                 .an-bg-circle{
                     margin: 24px auto 0;
                     width: 120px;
                     height: 120px;
-                    position: relative;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -54px;
+                    margin-left: -60px;
                     z-index: -1;
                 }
                 .lo{
-                    margin-top: -190px;
+                    margin-top: 24px;
+                    // margin-top: -190px;
                 }
                 .highlight{
                     position: absolute;
                     right: -30px;
                     top: -50px;
                     display: none;
-                }
-                .an-background{
-                    max-width: 440px;
-                    height: 448px;
-                    border-radius: 24px;
-                    position: absolute;
-                    right: -8px;
-                    bottom: -8px;
                 }
             }
         }
@@ -410,5 +422,15 @@ footer{
     @include content-accent(#FFD887)
 }
 
+.box-shadow1{
+    box-shadow: 8px 8px #BFC9F0;
+}
+
+.box-shadow2{
+    box-shadow: 8px 8px #EEE5FF;
+}
 
 
+.block{
+    display: block;
+}

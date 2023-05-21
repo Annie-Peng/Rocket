@@ -13968,45 +13968,55 @@ body {
 .banner .container {
   padding-top: 127px;
 }
-.banner .container .an-rounded1 {
+.banner .container a {
+  text-decoration: none;
+  color: #363636;
+}
+.banner .container .an-rounded1, .banner .container .an-rounded2 {
   border-radius: 24px;
   max-width: 440px;
   height: 448px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  opacity: 0.8;
+  position: relative;
 }
-.banner .container .an-rounded1:hover {
+.banner .container .an-rounded1:hover, .banner .container .an-rounded2:hover {
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
+}
+.banner .container .an-rounded1 .item, .banner .container .an-rounded2 .item {
+  margin-top: -10px;
+  opacity: 0.5;
+  line-height: 35px;
+}
+.banner .container .an-rounded1 .item:hover, .banner .container .an-rounded2 .item:hover {
   opacity: 1;
 }
-.banner .container .an-rounded1 .item {
-  margin-top: -34px;
+.banner .container .an-rounded1 .item .cover, .banner .container .an-rounded2 .item .cover {
+  height: 70px;
+  position: absolute;
+  left: 0;
+  bottom: 52px;
+  z-index: 1;
 }
-.banner .container .an-rounded1 .item .an-bg-circle {
+.banner .container .an-rounded1 .item .an-bg-circle, .banner .container .an-rounded2 .item .an-bg-circle {
   margin: 24px auto 0;
   width: 120px;
   height: 120px;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  bottom: -54px;
+  margin-left: -60px;
   z-index: -1;
 }
-.banner .container .an-rounded1 .item .lo {
-  margin-top: -190px;
+.banner .container .an-rounded1 .item .lo, .banner .container .an-rounded2 .item .lo {
+  margin-top: 24px;
 }
-.banner .container .an-rounded1 .item .highlight {
+.banner .container .an-rounded1 .item .highlight, .banner .container .an-rounded2 .item .highlight {
   position: absolute;
   right: -30px;
   top: -50px;
   display: none;
-}
-.banner .container .an-rounded1 .item .an-background {
-  max-width: 440px;
-  height: 448px;
-  border-radius: 24px;
-  position: absolute;
-  right: -8px;
-  bottom: -8px;
 }
 .banner .container .col-2 {
   height: 448px;
@@ -14327,4 +14337,18 @@ footer {
 .content-accent {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, transparent), color-stop(10%, #FFD887));
   background: linear-gradient(transparent 10%, #FFD887 10%);
+}
+
+.box-shadow1 {
+  -webkit-box-shadow: 8px 8px #BFC9F0;
+          box-shadow: 8px 8px #BFC9F0;
+}
+
+.box-shadow2 {
+  -webkit-box-shadow: 8px 8px #EEE5FF;
+          box-shadow: 8px 8px #EEE5FF;
+}
+
+.block {
+  display: block;
 }
