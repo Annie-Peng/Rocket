@@ -12,10 +12,10 @@ body{
 }
 
 .banner{
-    height: 735px;
     background-image: url(../banner/banner-bg.png);
     .container{
         padding-top: 127px;
+        padding-bottom: 160px;
         a{
             text-decoration: none;
             color: #363636;
@@ -36,6 +36,9 @@ body{
                 margin-top: -10px;
                 opacity: .5;
                 line-height: 35px;
+                .title{
+                    font-size: 48px;
+                }
                 .cover{
                     height: 70px;
                     position: absolute;
@@ -55,7 +58,9 @@ body{
                 }
                 .lo{
                     margin-top: 24px;
-                    // margin-top: -190px;
+                }
+                .lo2{
+                    display: none;
                 }
                 .highlight{
                     position: absolute;
@@ -65,7 +70,7 @@ body{
                 }
             }
         }
-        .col-2{
+        .col-md-2{
             height: 448px;
             padding-top: 206px;
             .an-corss{
@@ -76,11 +81,13 @@ body{
 }
 
 .map{
-    height: 540px;
     box-sizing: border-box;
     border-radius: 40px;
     .container{
         padding: 60px 0px;
+        .title div:last-child{
+            font-size: 48px;
+        }
         .pic{
             padding: 12px;
             box-sizing: border-box;
@@ -108,11 +115,14 @@ body{
         text-align: center;
         margin-top: 80px;
     }
+    .title div:last-child{
+        font-size: 48px;
+    }
     .hard-ware{
-        .col-10{
+        .col-md-10{
             margin-top: 60px;
         }
-        .col-5{
+        .col-md-5{
             margin-top: 48px;
             .pic{
                 max-width: 510px;
@@ -170,7 +180,7 @@ body{
     height: 1093px;
     margin-top: 80px;
     box-sizing: border-box;
-    .col-10{
+    .col-md-10{
         .promotion{
             margin-top: 60px;
             position: relative;
@@ -197,7 +207,7 @@ body{
                 font-weight: 700;
             }
         }
-        .row-cols-2{
+        .row-cols-md-2{
             .select{
                 max-width: 526px;
                 margin-top: 36px;
@@ -206,7 +216,8 @@ body{
                 border-radius: 24px;
                 .cost{
                     padding: 40px 0;
-                    width: 365px;
+                    max-width: 365px;
+                    font-size: 32px;
                 }
                 ul{
                     max-width: 365px;
@@ -237,6 +248,7 @@ body{
         }
         .title{
             transition: .3s;
+            font-size: 32px;
         }
         &:hover{
             img{
@@ -269,3 +281,136 @@ footer{
     box-shadow: 8px 8px #EEE5FF;
 }
 
+@media (max-width: 767px){
+    .banner{
+        .container{
+            padding: 60px 0;
+            .col-md-2{
+                display: none;
+            }
+            .an-rounded2{
+                margin-top: 46px;
+            }
+            .an-rounded1, .an-rounded2{
+                max-width: 294px;
+                height: 134px;
+                padding: 24px 0 24px 24px;
+                a{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+                .item{
+                    margin-top: 0px;
+                    .title{
+                        font-size: 32px;
+                    }
+                    .sub-title{
+                        width: 100%;
+                    }
+                    img{
+                        width: 48px;
+                        height: 48px;
+                    }
+                    .content{
+                        display: none;
+                    }
+                    .lo{
+                        display: none;
+                    }
+                    .lo2{
+                        display: block;
+                        position: absolute;
+                        top: 37px;
+                        right: -30px;
+                    }
+                    .an-bg-circle{
+                        width: 80px;
+                        height: 80px;
+                        left: 324px;
+                        top: -28px;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .map{
+        .container{
+            padding: 36px 48px;
+            .title div:last-child{
+                font-size: 32px;
+            }
+        }
+    }
+
+    .space{
+        .soft-ware{
+            .item{
+                margin-top: 28px;
+                display: flex;
+                padding: 0px;
+                img{
+                    width: 48px;
+                    height: 48px;
+                }
+                .content{
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+
+    .gallery{
+        margin-top: 40px;
+        img{
+            width: 332px;
+            height: 240px;
+        } 
+    }
+
+    .fee{
+        margin-top: 36px;
+        .col-md-10{
+            .promotion{
+                >div{
+                    position: absolute;
+                    left: 20px;
+                    top: 18px;
+                    z-index: 2;
+                }
+                img{
+                    position: absolute;
+                    left: 0px;
+                    top: 0;
+                }
+            }
+            .row-cols-md-2{
+                overflow-x: scroll;
+                &::-webkit-scrollbar{
+                    display: none;
+                    }
+                .select{
+                    padding: 0 31px 0 32px;
+                    >div{
+                        margin-top: 32px;
+                    }
+                    .cost{
+                        font-size: 24px;
+                    }
+                }
+                ul{
+                    max-width: 270px;
+                }
+            }
+        }
+    }
+
+    .signup{
+        .title{
+                font-size: 24px;
+            }
+        }
+}
