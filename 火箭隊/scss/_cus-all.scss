@@ -13,10 +13,10 @@ body{
 }
 
 .banner{
-    height: 735px;
     background-image: url(../banner/banner-bg.png);
     .container{
         padding-top: 127px;
+        padding-bottom: 160px;
         a{
             text-decoration: none;
             color: #363636;
@@ -56,7 +56,9 @@ body{
                 }
                 .lo{
                     margin-top: 24px;
-                    // margin-top: -190px;
+                }
+                .lo2{
+                    display: none;
                 }
                 .highlight{
                     position: absolute;
@@ -66,7 +68,7 @@ body{
                 }
             }
         }
-        .col-2{
+        .col-md-2{
             height: 448px;
             padding-top: 206px;
             .an-corss{
@@ -77,7 +79,6 @@ body{
 }
 
 .about{
-    height: 712px;
     border-radius: 40px;
     padding: 60px 0px;
     box-sizing: border-box;
@@ -172,7 +173,7 @@ body{
                 max-width: 636px;
                 height: 58px;
                 margin: 12px auto 0px;
-                padding: 17px 0 17px 0px;
+                padding: 17px 0;
                 box-shadow: 0px 2px 4px 0px #E8E8E8;
                 border-radius: 50px;
                 box-sizing: border-box;
@@ -186,7 +187,7 @@ body{
                 }
             }
         }
-    .col-10{
+    .col-md-10{
         .an-height-1{
             height: 588px;
         }
@@ -197,13 +198,11 @@ body{
             height: 356px;
         }
         .an-square{
-
             margin-top: 80px;
             background-image: url(../training/training-bg.png);
             .left{
                 .title{
-                    max-width: 204px;
-                    height: 60px;
+                    width: fit-content;
                     box-sizing: border-box;
                     border-radius: 12px;
                     margin-top: -26px;
@@ -370,7 +369,6 @@ body{
     margin-top: 124px;
     height: 312px;
         .title{
-            font-size: 32px;
             margin-top: -24px;
         }
         .item{
@@ -430,3 +428,203 @@ footer{
     box-shadow: 8px 8px #EEE5FF;
 }
 
+
+@media (max-width: 767px){
+    .banner{
+        .container{
+            padding: 60px 0;
+            .col-md-2{
+                display: none;
+            }
+            .an-rounded2{
+                margin-top: 46px;
+            }
+            .an-rounded1, .an-rounded2{
+                max-width: 294px;
+                height: 134px;
+                padding: 24px 0 24px 24px;
+                a{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+                .item{
+                    margin-top: 0px;
+                    .sub-title{
+                        width: 100%;
+                    }
+                    img{
+                        width: 48px;
+                        height: 48px;
+                    }
+                    .content{
+                        display: none;
+                    }
+                    .lo{
+                        display: none;
+                    }
+                    .lo2{
+                        display: block;
+                        position: absolute;
+                        top: 37px;
+                        right: -30px;
+                    }
+                    .an-bg-circle{
+                        width: 80px;
+                        height: 80px;
+                        left: 324px;
+                        top: -28px;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .about{
+        padding: 36px 0px;
+        height: 1516px;
+        .container{
+            .left{
+                .content{
+                    margin-top: 16px;
+                }
+            }
+            .right{
+                .an-scroll{
+                    overflow-y: visible;
+                    .an-rounded{
+                        display: flex;
+                        flex-wrap: wrap;
+                        height: 348px;
+                        .title{
+                            padding: 16px 20px;
+                            span{
+                                margin-top: 8px;
+                            }
+                            div{
+                                &:last-child{
+                                    margin-top: 12px;
+                                }
+                            }
+                        }
+                        .pic{
+                            width: 292px;
+                            height: 60px;
+                            left: 29px;
+                            top: 272px;
+                        }
+                        img{
+                            left: calc(50% - 164px/2);
+                            top: 164px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .sucess{
+        .suc-scroll{
+            animation: suc-scroll 8s infinite both;
+
+        }
+    
+    }
+    
+    .training{
+        .col-12{
+            &:first-child{
+                .sub-title{
+                    marquee{
+                        font-weight: 500;
+                        padding-left: 10px;
+                    }
+                    
+                }
+            }
+        }
+        .col-md-10{
+            .an-height-1{
+                height: 997px;
+            }
+            .an-height-2{
+                height: 635px;
+            }
+            .an-height-3{
+                height: 651px;
+            }
+            
+            .an-square{
+                .left{
+                    .title{
+                        padding: 10px 18px;
+                        .content{
+                            margin-top: 32px;
+                        }
+                    }
+                }
+                img{
+                    max-width: 200px;
+                }
+                .opposite-right{
+                    .content{
+                        margin-top: 32px;
+                        &:first-child{
+                            margin-top: 24px;
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
+
+    .coach{
+        .coach-group{
+            overflow-x: scroll;
+            .an-pic{
+            
+                .pic{
+                    width: 332px;
+                }
+            }
+        }
+        
+    }
+
+    .organizer{
+        .title{
+            margin-top: -12px;
+        }
+        .question{
+            margin-left: 16px;
+        }
+    }
+    
+}
+
+@keyframes suc-scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    25% {
+        -webkit-transform: translateX(-264px);
+                transform: translateX(-264px);
+      }
+    50% {
+    -webkit-transform: translateX(-528px);
+            transform: translateX(-528px);
+    }
+    75% {
+    -webkit-transform: translateX(-792px);
+            transform: translateX(-792px);
+    }
+    100% {
+        -webkit-transform: translateX(-1056px);
+                transform: translateX(-1056px);
+        }
+}
