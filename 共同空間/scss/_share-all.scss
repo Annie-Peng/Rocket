@@ -36,9 +36,6 @@ body{
                 margin-top: -10px;
                 opacity: .5;
                 line-height: 35px;
-                .title{
-                    font-size: 48px;
-                }
                 .cover{
                     height: 70px;
                     position: absolute;
@@ -85,16 +82,14 @@ body{
     border-radius: 40px;
     .container{
         padding: 60px 0px;
-        .title div:last-child{
-            font-size: 48px;
-        }
         .pic{
             padding: 12px;
             box-sizing: border-box;
             max-width: 636px;
             max-height: 420px;
-            img{
+            iframe{
                 width: 100%;
+                height: 396px;
             }
         }
         .content{
@@ -114,9 +109,6 @@ body{
     >.title{
         text-align: center;
         margin-top: 80px;
-    }
-    .title div:last-child{
-        font-size: 48px;
     }
     .hard-ware{
         .col-md-10{
@@ -156,20 +148,48 @@ body{
 
 .gallery{
     margin-top: 80px;
+    overflow-x: scroll;
     display: flex;
-    overflow-y: scroll;
     &::-webkit-scrollbar{
         display: none;
-        }
-    scroll-snap-type: both mandatory;
+    }
     li {
-        scroll-snap-align: center;
+	    animation: gallery 8s infinite both;
+        // scroll-snap-align: center;
         display: inline-block;
         &:nth-child(n+2){
             margin-left: 24px;
         }
     }    
+
+    
 }
+
+
+  @keyframes gallery {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    25% {
+        -webkit-transform: translateX(500px);
+                transform: translateX(500px);
+      }
+    50% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    }
+    75% {
+    -webkit-transform: translateX(1500px);
+            transform: translateX(1500px);
+    }
+    100% {
+        -webkit-transform: translateX(2000px);
+                transform: translateX(2000px);
+        }
+  }
+
+
 
 .active {
     scroll-snap-type: unset;
@@ -210,14 +230,14 @@ body{
         .row-cols-md-2{
             .select{
                 max-width: 526px;
-                margin-top: 36px;
                 height: 608px;
+                margin-top: 36px;
                 padding: 36px 0 0;
                 border-radius: 24px;
+                box-sizing: border-box;
                 .cost{
                     padding: 40px 0;
                     max-width: 365px;
-                    font-size: 32px;
                 }
                 ul{
                     max-width: 365px;
@@ -248,7 +268,6 @@ body{
         }
         .title{
             transition: .3s;
-            font-size: 32px;
         }
         &:hover{
             img{
@@ -302,9 +321,6 @@ footer{
                 }
                 .item{
                     margin-top: 0px;
-                    .title{
-                        font-size: 32px;
-                    }
                     .sub-title{
                         width: 100%;
                     }
@@ -339,8 +355,11 @@ footer{
     .map{
         .container{
             padding: 36px 48px;
-            .title div:last-child{
-                font-size: 32px;
+            .pic{
+                iframe{
+                    width: 100%;
+                    height: 308px;
+                }
             }
         }
     }
@@ -377,11 +396,14 @@ footer{
             .promotion{
                 >div{
                     position: absolute;
-                    left: 20px;
-                    top: 18px;
+                    left: 10px;
+                    top: 12px;
                     z-index: 2;
+                    font-size: 14px;
+                    box-sizing: content-box;
                 }
                 img{
+                    max-width: 331px;
                     position: absolute;
                     left: 0px;
                     top: 0;
@@ -393,24 +415,24 @@ footer{
                     display: none;
                     }
                 .select{
-                    padding: 0 31px 0 32px;
-                    >div{
-                        margin-top: 32px;
-                    }
-                    .cost{
-                        font-size: 24px;
-                    }
+                    max-width: 333px;
+                    height: 500px;
+                    padding: 32px 31px 32px 32px;
                 }
                 ul{
+                    li{
+                        &:nth-child(n+2){
+                            margin-top: 12px;
+                        }
+                    }
+                    margin-top: 16px;
                     max-width: 270px;
+                    &:nth-child(n+2){
+                        margin-top: 12px;
+                    }
                 }
             }
         }
     }
 
-    .signup{
-        .title{
-                font-size: 24px;
-            }
-        }
 }
