@@ -125,7 +125,7 @@ coachGroup.addEventListener('click',function(e){
 
 //跑馬燈
 let nav='';
-for(i=0;i<1000;i++){
+for(i=0;i<500;i++){
     nav+=`<span class="fs-9 mx-3">
     Let’s join
     </span>
@@ -139,7 +139,7 @@ for(i=0;i<1000;i++){
 navMarquee.innerHTML=nav;
 
 let sponser='';
-for(i=0;i<1000;i++){
+for(i=0;i<500;i++){
     sponser+=`<div class="item me-4">
     <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-rocket-lg.png"></div>
     <div class="sub-title mt-3">主辦單位</div>
@@ -178,6 +178,8 @@ for(i=0;i<1000;i++){
 
 };
 sponserMarquee.innerHTML=sponser;
+
+
     
 
 

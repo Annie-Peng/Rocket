@@ -110,12 +110,14 @@ body{
                     }
                     .title{
                         padding: 36px;
-                        span{
+                        .tag{
                             margin-top: 12px;
-                            border-radius: 50% / 100%;
-                            padding: 8px 16px;
-                            &:nth-child(n+2){
-                                margin-right: 12px;
+                            span{
+                                border-radius: 50% / 100%;
+                                padding: 8px 16px;
+                                &:nth-child(n+2){
+                                    margin-left: 12px;
+                                }
                             }
                         }
                         div{
@@ -159,12 +161,20 @@ body{
                 }
             }
         }
+        .item{
+            img{
+                &:nth-child(2){
+                    margin-top: 28px;
+                }
+                
+            }
+        }
     }
 }
 
 .training{
     margin-top: 92px;
-    .col-12{
+    .col-md-12{
         &:first-child{
             .title{
                 margin-top: -22px;
@@ -177,16 +187,18 @@ body{
                 box-shadow: 0px 2px 4px 0px #E8E8E8;
                 border-radius: 50px;
                 box-sizing: border-box;
-                span:first-child{
-                    padding-right: 10px;
-                }
-                span:last-child{
-                    font-weight: 500;
-                    padding-left: 10px;
+                span{
+                    &:first-child{
+                        padding-right: 10px;
+                    }
+                    &:nth-child(n+2){
+                        padding-left: 10px;
                     }
                 }
+                
             }
         }
+    }
     .col-md-10{
         .an-height-1{
             height: 588px;
@@ -469,12 +481,20 @@ footer{
                         top: 37px;
                         right: -30px;
                     }
+                    .cover{
+                        bottom: 42px;
+                    }
                     .an-bg-circle{
                         width: 80px;
                         height: 80px;
-                        left: 324px;
+                        left: 314px;
                         top: -28px;
                         transform: rotate(-90deg);
+                    }
+                    .highlight{
+                        right: 264px;
+                        top: -5px;
+                        transform: rotateX(-90deg);
                     }
                 }
             }
@@ -499,8 +519,14 @@ footer{
                         height: 348px;
                         .title{
                             padding: 16px 20px;
-                            span{
+                            .tag{
                                 margin-top: 8px;
+                                span{
+                                    &:nth-child(n+2){
+                                        margin-left: 8px;
+                                    }
+                                }
+
                             }
                             div{
                                 &:last-child{
@@ -509,10 +535,10 @@ footer{
                             }
                         }
                         .pic{
-                            width: 292px;
+                            width: 80%;
                             height: 60px;
-                            left: 29px;
-                            top: 272px;
+                            position: static;
+                            margin: 124px auto 0px auto;
                         }
                         img{
                             left: calc(50% - 164px/2);
@@ -526,15 +552,25 @@ footer{
     }
 
     .sucess{
-        .suc-scroll{
-            animation: suc-scroll 8s infinite both;
+        .container{
+            padding-top: 48px;
+            .suc-scroll{
+                overflow-x: scroll;
+                scroll-behavior: smooth;
+                &::-webkit-scrollbar{
+                    display: none;
+                    }
+                
+                
+                // animation: suc-scroll 8s infinite both;
 
+            }
         }
     
     }
     
     .training{
-        .col-12{
+        .col-md-12{
             &:first-child{
                 .sub-title{
                     marquee{
@@ -584,6 +620,7 @@ footer{
 
     .coach{
         .coach-group{
+            overflow-y: hidden;
             overflow-x: scroll;
             .an-pic{
             
@@ -593,6 +630,10 @@ footer{
             }
         }
         
+    }
+
+    .fee{
+        padding-top: 84px;
     }
 
     .organizer{
@@ -606,25 +647,28 @@ footer{
     
 }
 
-@keyframes suc-scroll {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    25% {
-        -webkit-transform: translateX(-264px);
-                transform: translateX(-264px);
-      }
-    50% {
-    -webkit-transform: translateX(-528px);
-            transform: translateX(-528px);
-    }
-    75% {
-    -webkit-transform: translateX(-792px);
-            transform: translateX(-792px);
-    }
-    100% {
-        -webkit-transform: translateX(-1056px);
-                transform: translateX(-1056px);
-        }
-}
+// @keyframes suc-scroll {
+//     0% {
+//         -webkit-transform: translateX(306px);
+//                 transform: translateX(306px);
+
+//       }
+//     25% {
+        
+//         -webkit-transform: translateX(0px);
+//                 transform: translateX(0px);
+//       }
+//     50% {
+//         -webkit-transform: translateX(-306px);
+//                 transform: translateX(-306px);
+//       }
+//     75% {
+//         -webkit-transform: translateX(-612px);
+//         transform: translateX(-612px);
+//     }
+
+//     100% {
+//         -webkit-transform: translateX(-918px);
+//                 transform: translateX(-918px);
+//         }
+// }
