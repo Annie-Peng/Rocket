@@ -69,7 +69,7 @@ banner.addEventListener('mouseover',function(e){
 
 //跑馬燈
 let nav='';
-for(i=0;i<1000;i++){
+for(i=0;i<500;i++){
     nav+=`<span class="fs-9 mx-3">
     Let’s join
     </span>

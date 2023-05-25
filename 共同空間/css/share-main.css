@@ -19477,68 +19477,21 @@ body {
 
 .gallery {
   margin-top: 80px;
-  overflow-x: scroll;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
-.gallery::-webkit-scrollbar {
+.gallery .col {
+  overflow-x: scroll;
+}
+.gallery .col::-webkit-scrollbar {
   display: none;
 }
-.gallery li {
-  -webkit-animation: gallery 8s infinite both;
-          animation: gallery 8s infinite both;
+.gallery .col li {
   display: inline-block;
+  scroll-snap-align: center;
 }
-.gallery li:nth-child(n+2) {
+.gallery .col li:nth-child(n+2) {
   margin-left: 24px;
 }
 
-@-webkit-keyframes gallery {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  25% {
-    -webkit-transform: translateX(500px);
-    transform: translateX(500px);
-  }
-  50% {
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
-  }
-  75% {
-    -webkit-transform: translateX(1500px);
-    transform: translateX(1500px);
-  }
-  100% {
-    -webkit-transform: translateX(2000px);
-    transform: translateX(2000px);
-  }
-}
-
-@keyframes gallery {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  25% {
-    -webkit-transform: translateX(500px);
-    transform: translateX(500px);
-  }
-  50% {
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
-  }
-  75% {
-    -webkit-transform: translateX(1500px);
-    transform: translateX(1500px);
-  }
-  100% {
-    -webkit-transform: translateX(2000px);
-    transform: translateX(2000px);
-  }
-}
 .active {
   -ms-scroll-snap-type: unset;
       scroll-snap-type: unset;
@@ -19561,10 +19514,13 @@ body {
   top: 16px;
   z-index: 2;
 }
-.fee .col-md-10 .promotion img {
+.fee .col-md-10 .promotion img:first-child {
   position: absolute;
   left: 74px;
   top: 0;
+}
+.fee .col-md-10 .promotion img:nth-child(2) {
+  display: none;
 }
 .fee .col-md-10 .promotion .title {
   margin-top: 37px;
@@ -19591,6 +19547,7 @@ body {
 .fee .col-md-10 .row-cols-md-2 .select ul {
   max-width: 365px;
   margin-top: 28px;
+  display: table;
 }
 .fee .col-md-10 .row-cols-md-2 .select ul li {
   list-style-image: url("../fee/ic-check-lg.svg");
@@ -19694,13 +19651,22 @@ footer {
     top: 37px;
     right: -30px;
   }
+  .banner .container .an-rounded1 .item .cover, .banner .container .an-rounded2 .item .cover {
+    bottom: 42px;
+  }
   .banner .container .an-rounded1 .item .an-bg-circle, .banner .container .an-rounded2 .item .an-bg-circle {
     width: 80px;
     height: 80px;
-    left: 324px;
+    left: 314px;
     top: -28px;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
+  }
+  .banner .container .an-rounded1 .item .highlight, .banner .container .an-rounded2 .item .highlight {
+    right: 264px;
+    top: -5px;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
   }
   .map .container {
     padding: 36px 48px;
@@ -19742,11 +19708,11 @@ footer {
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
   }
-  .fee .col-md-10 .promotion img {
-    max-width: 331px;
-    position: absolute;
-    left: 0px;
-    top: 0;
+  .fee .col-md-10 .promotion img:first-child {
+    display: none;
+  }
+  .fee .col-md-10 .promotion img:nth-child(2) {
+    display: block;
   }
   .fee .col-md-10 .row-cols-md-2 {
     overflow-x: scroll;

@@ -439,7 +439,7 @@ $stretched-link-z-index:                  1 !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   0rem !default;
 
 
 // Grid breakpoints
@@ -450,9 +450,9 @@ $paragraph-margin-bottom:   1rem !default;
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
   xs: 0,
-  sm: 375px,
-  md: 768px,
-  lg: 992px,
+  sm: 320px,
+  md: 1028px,
+  lg: 1028px,
   xl: 1200px,
   xxl: 1400px
 ) !default;
@@ -589,8 +589,10 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 $line-height-18:             1.125;  
-$line-height-28:             1.75;    
-$line-height-72:             4.5;    
+$line-height-28:             1.75;   
+$line-height-36:             36px;    
+$line-height-72:             72px;    
+
 
 $h0-font-size:                $font-size-base * 3;
 $h1-font-size:                $font-size-base * 2.5 !default;
@@ -621,11 +623,11 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom:      $spacer / 16 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        700 !default;
+$headings-line-height:        1.5 !default;
 $headings-color:              null !default;
 // scss-docs-end headings-variables
 
@@ -1507,8 +1509,8 @@ $list-group-border-color:           rgba($black, .125) !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         $spacer * .5 !default;
-$list-group-item-padding-x:         $spacer !default;
+$list-group-item-padding-y:         $spacer * 0 !default;
+$list-group-item-padding-x:         $spacer * 0 !default;
 $list-group-item-bg-scale:          -80% !default;
 $list-group-item-color-scale:       40% !default;
 

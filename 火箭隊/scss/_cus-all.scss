@@ -1,3 +1,10 @@
+ul{
+    padding: 0;
+    margin: 0;
+    li{
+        list-style: none;
+    }
+}
 
 
 body{
@@ -10,7 +17,43 @@ body{
     height: 64px;
     box-sizing: border-box;
     z-index: 4;
+        .marquee_first {
+            animation: marquee_first 28s linear infinite;
+            span{
+                white-space: nowrap;
+            }
+        }
+
+        .marquee_second {
+            animation: marquee_second 28s linear infinite;
+            animation-delay: -10s;
+            span{
+                white-space: nowrap;
+            }
+        }
+    
+      
 }
+
+@keyframes marquee_first {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee_second {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-200%);
+    }
+  }
 
 .banner{
     background-image: url(../banner/banner-bg.png);
@@ -31,10 +74,10 @@ body{
                 transform: translateY(-15px);
             }
             .item{
+                margin-top: -34px;
                 &:hover{
                     opacity: 1;
                 }
-                margin-top: -10px;
                 opacity: .5;
                 line-height: 35px;
                 .cover{
@@ -68,22 +111,19 @@ body{
                 }
             }
         }
-        .col-md-2{
-            height: 448px;
-            padding-top: 206px;
-            .an-corss{
-                line-height: 72px;
-            }
+        .an-cross{
+            line-height: 448px;
         }
     }
 }
 
+
+
 .about{
     border-radius: 40px;
     padding: 60px 0px;
-    box-sizing: border-box;
     .container{
-        .left{
+        .whatIsRocket{
             .content{
                 margin-top: 40px;
                 font-weight: 400;
@@ -93,7 +133,7 @@ body{
                 }
             }
         }
-        .right{
+        .skill{
             .an-scroll{
                 height: 592px;
                 overflow-y: scroll;
@@ -105,36 +145,39 @@ body{
                     border-radius: 24px;
                     display: flex;
                     position: relative;
+                    padding: 36px;
                     &:nth-child(n+2){
                         margin-top: 32px;
                     }
                     .title{
-                        padding: 36px;
-                        .tag{
-                            margin-top: 12px;
-                            span{
-                                border-radius: 50% / 100%;
-                                padding: 8px 16px;
-                                &:nth-child(n+2){
-                                    margin-left: 12px;
-                                }
-                            }
-                        }
-                        div{
-                            &:last-child{
-                                margin-top: 80px;
+                        width: 75%;
+                    }
+                    .engineer{
+                        width: 25%;
+                    }
+                    .tag{
+                        margin-top: 12px;
+                        li{
+                            border-radius: 50% / 100%;
+                            padding: 8px 16px;
+                            &:nth-child(n+2){
+                                margin-left: 12px;
                             }
                         }
                     }
                     .pic{
-                        width: 169px;
-                        height: 208px;
+                        max-width: 169px;
+                        height: 100%;
                         border-radius: 24px;
-                        position: absolute;
-                        top: 36px;
-                        right: 36px;
+                        // position: absolute;
+                        // top: 36px;
+                        // right: 36px;
+                        // max-width: 169px;
+                        // height: 100%;
+                        // border-radius: 24px;
                     }
                     img{
+                        width: 25%;
                         position: absolute;
                         right: 76px;
                         top: 60px;
@@ -149,70 +192,54 @@ body{
 .sucess{
     .container{
         padding-top: 92px;
-        .title{
-            text-align: center;
-        }
         .pic-group{
-            .col{
+            .item{
                 margin-top: 28px;
                 max-width: 306px;
                 img{
                     width: 100%;
+                    &:nth-child(2){
+                        margin-top: 28px;
+                    }
                 }
             }
         }
-        .item{
-            img{
-                &:nth-child(2){
-                    margin-top: 28px;
-                }
-                
-            }
-        }
+
     }
 }
 
 .training{
     margin-top: 92px;
-    .col-md-12{
-        &:first-child{
-            .title{
-                margin-top: -22px;
-            }
-            .sub-title{
-                max-width: 636px;
-                height: 58px;
-                margin: 12px auto 0px;
-                padding: 17px 0;
-                box-shadow: 0px 2px 4px 0px #E8E8E8;
-                border-radius: 50px;
-                box-sizing: border-box;
-                span{
-                    &:first-child{
-                        padding-right: 10px;
-                    }
-                    &:nth-child(n+2){
-                        padding-left: 10px;
-                    }
+    .info{
+        .title{
+            margin-top: -22px;
+        }
+        .sub-title{
+            max-width: 636px;
+            height: 58px;
+            margin: 12px auto 0px;
+            padding: 17px 0;
+            box-shadow: 0px 2px 4px 0px #E8E8E8;
+            border-radius: 50px;
+            box-sizing: border-box;
+            h4{
+                &:first-child{
+                    padding-right: 10px;
                 }
-                
+                &:nth-child(n+2){
+                    padding-left: 10px;
+                }
             }
+            
         }
     }
-    .col-md-10{
-        .an-height-1{
-            height: 588px;
-        }
-        .an-height-2{
-            height: 384px;
-        }
-        .an-height-3{
-            height: 356px;
-        }
+
+    .description{
         .an-square{
             margin-top: 80px;
             background-image: url(../training/training-bg.png);
-            .left{
+            padding-bottom: 40px;
+            .frontEnd-UI{
                 .title{
                     width: fit-content;
                     box-sizing: border-box;
@@ -234,7 +261,7 @@ body{
                     }
                 }
             }
-            .opposite-left{
+            .backEnd{
                 .title{
                     max-width: 204px;
                     height: 60px;
@@ -249,7 +276,7 @@ body{
                     margin-top: 36px;
                 }
             }
-            .opposite-right{
+            .backEnd-description{
                 .content{
                     margin-top: 36px;
                     &:first-child{
@@ -262,6 +289,12 @@ body{
             }
             img{
                 max-width: 280px;
+            }
+            ol{
+                li{
+                    list-style: decimal;
+                }
+
             }
         }
     }
@@ -280,6 +313,9 @@ body{
         height: 160px;
         position: relative;
         background-color: white;
+        h4{
+            font-size: 16px;
+        }
         .pic{
             width: 180px;
             height: 180px;
@@ -351,15 +387,13 @@ body{
     padding-top: 80px;
     .question{
         margin-left: 32px;
-        div{
-            &:nth-child(2n){
-                font-weight: 500;
-                span{
-                    font-weight: 700;
-                }
-                a{
-                    color: #363636; 
-                }
+        p{
+            font-weight: 500;
+            span{
+                font-weight: 700;
+            }
+            a{
+                color: #363636; 
             }
         }
     }
@@ -441,7 +475,7 @@ footer{
 }
 
 
-@media (max-width: 767px){
+@media (max-width: 1027px){
     .banner{
         .container{
             padding: 60px 0;
@@ -503,22 +537,20 @@ footer{
 
     .about{
         padding: 36px 0px;
-        height: 1516px;
         .container{
-            .left{
+            .whatIsRocket{
                 .content{
                     margin-top: 16px;
                 }
             }
-            .right{
+            .skill{
                 .an-scroll{
                     overflow-y: visible;
+                    height: 1092px;
                     .an-rounded{
-                        display: flex;
-                        flex-wrap: wrap;
                         height: 348px;
+                        padding: 16px 20px;
                         .title{
-                            padding: 16px 20px;
                             .tag{
                                 margin-top: 8px;
                                 span{
@@ -528,19 +560,17 @@ footer{
                                 }
 
                             }
-                            div{
-                                &:last-child{
-                                    margin-top: 12px;
-                                }
-                            }
+                        }
+                        h3:last-child{
+                                margin-top: 12px;
                         }
                         .pic{
-                            width: 80%;
+                            max-width: 386px;
                             height: 60px;
-                            position: static;
-                            margin: 124px auto 0px auto;
+                            
                         }
                         img{
+                            width: 40%;
                             left: calc(50% - 164px/2);
                             top: 164px;
                         }
@@ -561,16 +591,13 @@ footer{
                     display: none;
                     }
                 
-                
-                // animation: suc-scroll 8s infinite both;
-
             }
         }
     
     }
     
     .training{
-        .col-md-12{
+        .info{
             &:first-child{
                 .sub-title{
                     marquee{
@@ -581,19 +608,10 @@ footer{
                 }
             }
         }
-        .col-md-10{
-            .an-height-1{
-                height: 997px;
-            }
-            .an-height-2{
-                height: 635px;
-            }
-            .an-height-3{
-                height: 651px;
-            }
-            
+        .description{
             .an-square{
-                .left{
+                padding-bottom: 32px;
+                .frontEnd-UI{
                     .title{
                         padding: 10px 18px;
                         .content{
@@ -604,7 +622,7 @@ footer{
                 img{
                     max-width: 200px;
                 }
-                .opposite-right{
+                .backEnd-description{
                     .content{
                         margin-top: 32px;
                         &:first-child{
@@ -615,6 +633,7 @@ footer{
                 
             }
             
+            
         }
     }
 
@@ -623,7 +642,9 @@ footer{
             overflow-y: hidden;
             overflow-x: scroll;
             .an-pic{
-            
+                h4{
+                    font-size: 12px;
+                }
                 .pic{
                     width: 332px;
                 }
