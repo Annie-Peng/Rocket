@@ -19729,10 +19729,10 @@ footer {
     margin-top: 16px;
     max-width: 270px;
   }
-  .fee .col-md-10 .row-cols-md-2 ul li:nth-child(n+2) {
-    margin-top: 12px;
+  .fee .col-md-10 .row-cols-md-2 ul li {
+    list-style-image: url("../fee/ic-check-sm.svg");
   }
-  .fee .col-md-10 .row-cols-md-2 ul:nth-child(n+2) {
+  .fee .col-md-10 .row-cols-md-2 ul li:nth-child(n+2) {
     margin-top: 12px;
   }
 }

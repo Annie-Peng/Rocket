@@ -436,15 +436,13 @@ footer{
                 }
                 ul{
                     li{
+                        list-style-image: url('../fee/ic-check-sm.svg');
                         &:nth-child(n+2){
                             margin-top: 12px;
                         }
                     }
                     margin-top: 16px;
                     max-width: 270px;
-                    &:nth-child(n+2){
-                        margin-top: 12px;
-                    }
                 }
             }
         }
