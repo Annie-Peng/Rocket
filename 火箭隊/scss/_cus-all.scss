@@ -17,43 +17,43 @@ body{
     height: 64px;
     box-sizing: border-box;
     z-index: 4;
-        .marquee_first {
-            animation: marquee_first 28s linear infinite;
-            span{
-                white-space: nowrap;
-            }
-        }
+        // .marquee_first {
+        //     animation: marquee_first 28s linear infinite;
+        //     span{
+        //         white-space: nowrap;
+        //     }
+        // }
 
-        .marquee_second {
-            animation: marquee_second 28s linear infinite;
-            animation-delay: -10s;
-            span{
-                white-space: nowrap;
-            }
-        }
+        // .marquee_second {
+        //     animation: marquee_second 28s linear infinite;
+        //     animation-delay: -10s;
+        //     span{
+        //         white-space: nowrap;
+        //     }
+        // }
     
       
 }
 
-@keyframes marquee_first {
-    0% {
-      transform: translateX(100%);
-    }
+// @keyframes marquee_first {
+//     0% {
+//       transform: translateX(100%);
+//     }
 
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+//     100% {
+//       transform: translateX(-100%);
+//     }
+//   }
 
-  @keyframes marquee_second {
-    0% {
-      transform: translateX(0%);
-    }
+//   @keyframes marquee_second {
+//     0% {
+//       transform: translateX(0%);
+//     }
 
-    100% {
-      transform: translateX(-200%);
-    }
-  }
+//     100% {
+//       transform: translateX(-200%);
+//     }
+//   }
 
 .banner{
     background-image: url(../banner/banner-bg.png);
@@ -183,13 +183,16 @@ body{
                         top: 60px;
                         z-index: 2;
                     }
+                    h3{
+                        white-space: nowrap;
+                    }
                 }
             }
         }
     }
 }
 
-.sucess{
+.success{
     .container{
         padding-top: 92px;
         .pic-group{
@@ -303,48 +306,51 @@ body{
 
 
 .coach{
+    .coach-group{
+        .an-pic{
+            margin-top: 40px;
+            box-sizing: border-box;
+            width: 251px;
+            height: 160px;
+            position: relative;
+            background-color: white;
+            h4{
+                font-size: 16px;
+            }
+            .pic{
+                width: 180px;
+                height: 180px;
+                img{
+                    bottom: 0px;
+                    left: 0px;
+                    position: absolute;
+                    width: 180px;
+                }
+            }
+            .text{
+                position: absolute;
+                top: -24px;
+                right: 20px;
+                border-radius: 12px;
+                text-align: center;
+                width: 48px;
+                box-sizing: border-box;
+                transition: .3s;
+                box-shadow: 4px 4px #363636;
+            }
+            &:hover{
+                .text{
+                    top: -40px;
+                }
+            }
+            
+            
+        }
+    }
     .title{
         margin-top: 64px;
     }
-    .an-pic{
-        margin-top: 40px;
-        box-sizing: border-box;
-        width: 251px;
-        height: 160px;
-        position: relative;
-        background-color: white;
-        h4{
-            font-size: 16px;
-        }
-        .pic{
-            width: 180px;
-            height: 180px;
-            img{
-                bottom: 0px;
-                left: 0px;
-                position: absolute;
-                width: 180px;
-            }
-        }
-        .text{
-            position: absolute;
-            top: -24px;
-            right: 20px;
-            border-radius: 12px;
-            text-align: center;
-            width: 48px;
-            box-sizing: border-box;
-            transition: .3s;
-            box-shadow: 4px 4px #363636;
-        }
-        &:hover{
-            .text{
-                top: -40px;
-            }
-        }
-        
-        
-    }
+    
     .trans-content{
         margin-top: 28px;
         .title{
@@ -553,9 +559,9 @@ footer{
                         .title{
                             .tag{
                                 margin-top: 8px;
-                                span{
+                                li{
                                     &:nth-child(n+2){
-                                        margin-left: 8px;
+                                        margin-left: 2px;
                                     }
                                 }
 
@@ -565,8 +571,11 @@ footer{
                                 margin-top: 12px;
                         }
                         .pic{
-                            max-width: 386px;
+                            width: 292px;
                             height: 60px;
+                            position: absolute;
+                            left: 20px;
+                            bottom: 16px;
                             
                         }
                         img{
@@ -581,7 +590,7 @@ footer{
         }
     }
 
-    .sucess{
+    .success{
         .container{
             padding-top: 48px;
             .suc-scroll{
@@ -598,6 +607,9 @@ footer{
     
     .training{
         .info{
+            .title{
+                margin-top: -12px;
+            }
             &:first-child{
                 .sub-title{
                     marquee{
@@ -646,7 +658,7 @@ footer{
                     font-size: 12px;
                 }
                 .pic{
-                    width: 332px;
+                    width: 250px;
                 }
             }
         }

@@ -2,7 +2,7 @@ const highlight = document.querySelectorAll('.highlight');
 const banner = document.querySelector('.banner .row');
 const anRounded1 = document.querySelector('.an-rounded1');
 const anRounded2 = document.querySelector('.an-rounded2');
-const coach = document.querySelectorAll(`div.an-pic[data-coach]`);
+const coach = document.querySelectorAll(`li.an-pic[data-coach]`);
 const coachGroup = document.querySelector('.coach-group');
 const transContent = document.querySelector('.trans-content');
 const navMarquee = document.querySelector('.navMarquee');
@@ -125,7 +125,7 @@ coachGroup.addEventListener('click',function(e){
 
 //跑馬燈
 let nav='';
-for(i=0;i<10;i++){
+for(i=0;i<50;i++){
     nav+=`<span class="fs-9 mx-3">
     Let’s join
     </span>
@@ -139,42 +139,44 @@ for(i=0;i<10;i++){
 navMarquee.innerHTML=nav;
 
 let sponser='';
-for(i=0;i<10;i++){
-    sponser+=`<div class="item me-4">
-    <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-rocket-lg.png"></div>
-    <div class="sub-title mt-3">主辦單位</div>
-    <div class="content">火箭隊</div>
-  </div>
-  <div class="item me-4">
-    <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-hexschool-lg.png"></div>
-    <div class="sub-title mt-3">協辦單位</div>
-    <div class="content">六角學院</div>
-  </div>
-  <div class="item me-4">
-    <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-goodidea-lg.png"></div>
-    <div class="sub-title mt-3">協辦單位</div>
-    <div class="content">好想工作室</div>
-  </div>
-  <div class="item me-4">
-    <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-kdan-lg.png"></div>
-    <div class="sub-title mt-3">合作招募廠商</div>
-    <div class="content">凱鈿科技</div>
-  </div>
-  <div class="item me-4">
-    <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-titan-lg.pg.png"></div>
-    <div class="sub-title mt-3">合作招募廠商</div>
-    <div class="content">鈦坦科技</div>
-  </div>
-  <div class="item me-4">
-    <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-skw-lg.png"></div>
-    <div class="sub-title mt-3">合作招募廠商</div>
-    <div class="content">坂和企業</div>
-  </div>
-  <div class="item me-4">
-    <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-wistron-lg.png"></div>
-    <div class="sub-title mt-3">合作招募廠商</div>
-    <div class="content">緯創資通</div>
-  </div>`;
+for(i=0;i<50;i++){
+    sponser+=`<ul class="col sponserMarquee d-flex">
+    <li class="item me-4">
+      <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-rocket-lg.png"></div>
+      <div class="sub-title mt-3">主辦單位</div>
+      <div class="content">火箭隊</div>
+    </li>
+    <li class="item me-4">
+      <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-hexschool-lg.png"></div>
+      <div class="sub-title mt-3">協辦單位</div>
+      <div class="content">六角學院</div>
+    </li>
+    <li class="item me-4">
+      <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-goodidea-lg.png"></div>
+      <div class="sub-title mt-3">協辦單位</div>
+      <div class="content">好想工作室</div>
+    </li>
+    <li class="item me-4">
+      <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-kdan-lg.png"></div>
+      <div class="sub-title mt-3">合作招募廠商</div>
+      <div class="content">凱鈿科技</div>
+    </li>
+    <li class="item me-4">
+      <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-titan-lg.pg.png"></div>
+      <div class="sub-title mt-3">合作招募廠商</div>
+      <div class="content">鈦坦科技</div>
+    </li>
+    <li class="item me-4">
+      <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-skw-lg.png"></div>
+      <div class="sub-title mt-3">合作招募廠商</div>
+      <div class="content">坂和企業</div>
+    </li>
+    <li class="item me-4">
+      <div class="pic bg-white text-center"><img src="./organizer/lg/organizer-wistron-lg.png"></div>
+      <div class="sub-title mt-3">合作招募廠商</div>
+      <div class="content">緯創資通</div>
+    </li>
+  </ul>`;
 
 };
 sponserMarquee.innerHTML=sponser;

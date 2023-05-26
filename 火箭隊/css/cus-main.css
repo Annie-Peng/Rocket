@@ -19539,18 +19539,21 @@ body {
   top: 60px;
   z-index: 2;
 }
+.about .container .skill .an-scroll .an-rounded h3, .about .container .skill .an-scroll .an-rounded .h3 {
+  white-space: nowrap;
+}
 
-.sucess .container {
+.success .container {
   padding-top: 92px;
 }
-.sucess .container .pic-group .item {
+.success .container .pic-group .item {
   margin-top: 28px;
   max-width: 306px;
 }
-.sucess .container .pic-group .item img {
+.success .container .pic-group .item img {
   width: 100%;
 }
-.sucess .container .pic-group .item img:nth-child(2) {
+.success .container .pic-group .item img:nth-child(2) {
   margin-top: 28px;
 }
 
@@ -19638,10 +19641,7 @@ body {
   list-style: decimal;
 }
 
-.coach .title {
-  margin-top: 64px;
-}
-.coach .an-pic {
+.coach .coach-group .an-pic {
   margin-top: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -19650,20 +19650,20 @@ body {
   position: relative;
   background-color: white;
 }
-.coach .an-pic h4, .coach .an-pic .h4 {
+.coach .coach-group .an-pic h4, .coach .coach-group .an-pic .h4 {
   font-size: 16px;
 }
-.coach .an-pic .pic {
+.coach .coach-group .an-pic .pic {
   width: 180px;
   height: 180px;
 }
-.coach .an-pic .pic img {
+.coach .coach-group .an-pic .pic img {
   bottom: 0px;
   left: 0px;
   position: absolute;
   width: 180px;
 }
-.coach .an-pic .text {
+.coach .coach-group .an-pic .text {
   position: absolute;
   top: -24px;
   right: 20px;
@@ -19677,8 +19677,11 @@ body {
   -webkit-box-shadow: 4px 4px #363636;
           box-shadow: 4px 4px #363636;
 }
-.coach .an-pic:hover .text {
+.coach .coach-group .an-pic:hover .text {
   top: -40px;
+}
+.coach .title {
+  margin-top: 64px;
 }
 .coach .trans-content {
   margin-top: 28px;
@@ -19879,30 +19882,36 @@ footer {
   .about .container .skill .an-scroll .an-rounded .title .tag {
     margin-top: 8px;
   }
-  .about .container .skill .an-scroll .an-rounded .title .tag span:nth-child(n+2) {
-    margin-left: 8px;
+  .about .container .skill .an-scroll .an-rounded .title .tag li:nth-child(n+2) {
+    margin-left: 2px;
   }
   .about .container .skill .an-scroll .an-rounded h3:last-child, .about .container .skill .an-scroll .an-rounded .h3:last-child {
     margin-top: 12px;
   }
   .about .container .skill .an-scroll .an-rounded .pic {
-    max-width: 386px;
+    width: 292px;
     height: 60px;
+    position: absolute;
+    left: 20px;
+    bottom: 16px;
   }
   .about .container .skill .an-scroll .an-rounded img {
     width: 40%;
     left: calc(50% - 82px);
     top: 164px;
   }
-  .sucess .container {
+  .success .container {
     padding-top: 48px;
   }
-  .sucess .container .suc-scroll {
+  .success .container .suc-scroll {
     overflow-x: scroll;
     scroll-behavior: smooth;
   }
-  .sucess .container .suc-scroll::-webkit-scrollbar {
+  .success .container .suc-scroll::-webkit-scrollbar {
     display: none;
+  }
+  .training .info .title {
+    margin-top: -12px;
   }
   .training .info:first-child .sub-title marquee {
     font-weight: 500;
@@ -19934,7 +19943,7 @@ footer {
     font-size: 12px;
   }
   .coach .coach-group .an-pic .pic {
-    width: 332px;
+    width: 250px;
   }
   .fee {
     padding-top: 84px;
