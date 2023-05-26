@@ -1,3 +1,11 @@
+ul{
+    padding: 0;
+    margin: 0;
+    li{
+        list-style: none;
+    }
+}
+
 
 body{
     font-family: 'Josefin Sans', 'Noto sans TC', sans-serif;
@@ -30,10 +38,10 @@ body{
                 transform: translateY(-15px);
             }
             .item{
+                margin-top: -34px;
                 &:hover{
                     opacity: 1;
                 }
-                margin-top: -10px;
                 opacity: .5;
                 line-height: 35px;
                 .cover{
@@ -67,12 +75,8 @@ body{
                 }
             }
         }
-        .col-md-2{
-            height: 448px;
-            padding-top: 206px;
-            .an-corss{
-                line-height: 72px;
-            }
+        .an-cross{
+            line-height: 448px;
         }
     }
 }
@@ -111,10 +115,10 @@ body{
         margin-top: 80px;
     }
     .hard-ware{
-        .col-md-10{
+        h4{
             margin-top: 60px;
         }
-        .col-md-5{
+        .item{
             margin-top: 48px;
             .pic{
                 max-width: 510px;
@@ -148,20 +152,18 @@ body{
 
 .gallery{
     margin-top: 80px;
-    .col{
+    .gallery-scroll{
         overflow-x: scroll;
         &::-webkit-scrollbar{
             display: none;
         }
-        li {
-            display: inline-block;
-            // animation: gallery 8s infinite both;
-            scroll-snap-align: center;
-            &:nth-child(n+2){
-                margin-left: 24px;
-            }
-        }  
+
     }
+    li {
+        &:nth-child(n+2){
+            margin-left: 24px;
+        }
+    }   
       
 }
 
@@ -211,15 +213,10 @@ body{
                 top: 16px;
                 z-index: 2;
             }
-            img{
-                &:first-child{
-                    position: absolute;
-                    left: 74px;
-                    top: 0;
-                }
-                &:nth-child(2){
-                    display: none;
-                }
+            >img{
+                position: absolute;
+                left: 70px;
+                top: 0;
             }
             .title{
                 margin-top: 37px;
@@ -236,7 +233,7 @@ body{
                 max-width: 526px;
                 height: 608px;
                 margin-top: 36px;
-                padding: 36px 0 0;
+                padding: 36px 80px 0 81px;
                 border-radius: 24px;
                 box-sizing: border-box;
                 .cost{
@@ -246,6 +243,7 @@ body{
                 ul{
                     max-width: 365px;
                     margin-top: 28px;
+                    margin-left: 36px;
                     display: table;
                     li{
                         &:nth-child(n+2){
@@ -304,7 +302,7 @@ footer{
     box-shadow: 8px 8px #EEE5FF;
 }
 
-@media (max-width: 767px){
+@media (max-width: 1027px){
     .banner{
         .container{
             padding: 60px 0;
@@ -400,6 +398,10 @@ footer{
             width: 332px;
             height: 240px;
         } 
+        
+        .gallery-scroll{
+            width: 332px;
+        }
     }
 
     .fee{
@@ -415,11 +417,10 @@ footer{
                     box-sizing: content-box;
                 }
                 img{
-                    &:first-child{
-                        display: none;
-                    }
-                    &:nth-child(2){
-                        display: block;
+                    &:last-child{
+                        display: absolute;
+                        left: 0;
+                        top: 0;
                     }
                 }
             }
